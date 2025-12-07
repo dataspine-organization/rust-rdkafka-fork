@@ -1,7 +1,10 @@
 # Changelog
 
-## vNEXT+2.12.1 (2025-11-05)
+## v4.10.0+2.12.1 (2026-01-25)
 * Bump librdkafka to v2.12.1.
+* Fix build script for musl builds that require SASL ([#818])
+
+[#818]: https://github.com/fede1024/rust-rdkafka/pull/818
 
 ## v4.9.0+2.10.0
 * Add cargo enforcement of MSRV of 1.74.
