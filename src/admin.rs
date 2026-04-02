@@ -399,7 +399,7 @@ impl FromClientConfig for AdminClient<DefaultClientContext> {
     }
 }
 
-impl<C: ClientContext> FromClientConfigAndContext<C> for AdminClient<C> {
+impl<C: ClientContext + 'static> FromClientConfigAndContext<C> for AdminClient<C> {
     fn from_config_and_context(config: &ClientConfig, context: C) -> KafkaResult<AdminClient<C>> {
         let native_config = config.create_native_config()?;
         // librdkafka only provides consumer and producer types. We follow the
